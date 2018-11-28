@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import { signOut } from "../../store/actions/authAction";
 import { connect } from 'react-redux'
-import { map } from '@firebase/util';
 
 const SignedInLink=(props)=>{
   // console.log(props);
