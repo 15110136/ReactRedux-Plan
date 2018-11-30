@@ -1,0 +1,26 @@
+[debug] [2018-11-30T02:42:01.699Z] ----------------------------------------------------------------------
+[debug] [2018-11-30T02:42:01.703Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\thong.dn\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2018-11-30T02:42:01.703Z] CLI Version:   6.1.1
+[debug] [2018-11-30T02:42:01.703Z] Platform:      win32
+[debug] [2018-11-30T02:42:01.703Z] Node Version:  v8.12.0
+[debug] [2018-11-30T02:42:01.704Z] Time:          Fri Nov 30 2018 09:42:01 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-11-30T02:42:01.704Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=591814862&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2018-11-30T02:42:18.606Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+
+[debug] [2018-11-30T02:42:18.739Z] Token Fetch Error: Error
+    at new FirebaseError (C:\Users\thong.dn\AppData\Roaming\npm\node_modules\firebase-tools\lib\error.js:9:18)
+    at Request._callback (C:\Users\thong.dn\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:28:31)
+    at self.callback (C:\Users\thong.dn\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (C:\Users\thong.dn\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:881:8)
+    at emitOne (events.js:116:13)
+    at ClientRequest.emit (events.js:211:7)
+    at TLSSocket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)

@@ -9,27 +9,42 @@ class ProjectList extends React.Component {
     super(props)
 
     this.state = {
-      id: ""
+      id: "",
     }
   }
   handleDelete = (project) => {
     this.props.deleteProject(project.id);
   }
 
+  handleUpdate = (project) => {
+    console.log(project);
+  }
+
   render() {
-    const { projects } = this.props;
+    const { projects, page,size } = this.props;
+    console.log(page);
+
+    let startIndex = 0 + size * (page - 1);
+    let endIndex = 2 + size * (page - 1) + 1;
+    console.log(startIndex, endIndex);
+
+
     return (
       <div className="project-list section">
-        {projects && projects.map(project => {
-          return (
-            <div className="card z-depth-0 project-summary" key={project.id}>
-              <Link to={`/project/${project.id}`}>
-                <ProjectSummary project={project} />
-              </Link>
-              <button className="btn-floating btn-medium waves-effect waves-light red" onClick={() => this.handleDelete(project)}><i className="material-icons">X</i></button>
-              <button className="right btn-floating btn-medium waves-effect waves-light cyan" onClick={() => this.handleDelete(project)}><i className="material-icons">O</i></button>
-            </div>
-          )
+        {projects && projects.slice(startIndex, endIndex).map(project => {
+          if (project) {
+            console.log(project);
+
+            return (
+              <div className="card z-depth-0 project-summary" key={project.id}>
+                <Link to={`/project/${project.id}`}>
+                  <ProjectSummary project={project} />
+                </Link>
+                <button className="btn-floating btn-medium waves-effect waves-light red" onClick={() => this.handleDelete(project)}><i className="material-icons"></i></button>
+                <button className="right btn-floating btn-medium waves-effect waves-light cyan" onClick={() => this.handleUpdate(project)}><i className="material-icons"></i></button>
+              </div>
+            )
+          }
         })}
       </div>
     )

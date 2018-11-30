@@ -30,3 +30,8 @@ exports.userJoined = functions.auth.user()
         return createNotification(notifycation);
       });
   });
+
+exports.deleteProject=functions.firestore.document('projects/{projectId}').onDelete((snap,context)=>{
+  const deletedValue=snap.data();
+  return console.log(deletedValue);
+})
